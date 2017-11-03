@@ -6,5 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  show = true; 
+  user = {
+    firstName: '',
+  }
+  
+
+  onSubmit(){
+    this.show = false;
+  }
+}
+
+export class User{
+  constructor(
+    public firstName: string = "",
+    public lastName: string = "",
+    public email:string = "",
+    public password: string = "",
+    public address: string = "",
+    public unit: string = "",
+    public city: string = "",
+    public state: string = "",
+    public lucky: string = "",
+  ){}
 }
